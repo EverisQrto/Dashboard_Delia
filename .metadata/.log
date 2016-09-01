@@ -1,0 +1,26 @@
+!SESSION 2016-09-01 11:04:26.956 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.fullversion=JRE 1.6.0 IBM J9 2.6 Linux x86-32 20130301_140166 (JIT enabled, AOT enabled)
+J9VM - R26_Java626_SR5_FP1_20130301_0937_B140166
+JIT  - r11.b03_20130131_32403
+GC   - R26_Java626_SR5_FP1_20130301_0937_B140166
+J9CL - 20130301_140166
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data /home/everis/develop/workspaces/Dashboard_Delia -os linux -ws gtk -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY edu.umd.cs.findbugs.plugin.eclipse 4 0 2016-09-01 11:04:32.618
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: edu.umd.cs.findbugs.plugin.eclipse [1078]
+  Unresolved requirement: Require-Bundle: findbugs; visibility:="reexport"; resolution:="optional"
+  Unresolved requirement: Require-Capability: osgi.ee; filter:="(&(osgi.ee=JavaSE)(version=1.7))"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
